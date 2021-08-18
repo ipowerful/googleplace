@@ -9,7 +9,7 @@ use Illuminate\Support\Collection;
  * @author Tuhin Bepari <digitaldreams40@gmail.com>
  *
  * Most frequently used Class. A single Place which contains details about that place like phone,address, photos and more
- * 
+ *
  * See docs
  * https://developers.google.com/places/web-service/details
  */
@@ -316,4 +316,20 @@ class Place extends Request
         $elevationStr = isset($firstResult['elevation']) ? round($firstResult['elevation'], 2) : false;
         return !empty($object) ? $response : $elevationStr;
     }
+
+	/**
+	 * @return mixed
+	 */
+	public function rating()
+	{
+		return isset($this->attributes['rating']) ? $this->attributes['rating'] : null;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function userRatingsTotal()
+	{
+		return isset($this->attributes['user_ratings_total']) ? $this->attributes['user_ratings_total'] : null;
+	}
 }

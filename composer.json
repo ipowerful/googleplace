@@ -1,11 +1,14 @@
 {
-    "name": "digitaldream/googleplace",
+    "name": "ipowerful/googleplace",
     "description": "Google Places API library",
     "license": "MIT",
     "authors": [
         {
             "name": "Tuhin",
             "email": "digitaldreams40@gmail.com"
+        }, {
+            "name": "Ilia",
+            "email": "eley81@gmail.com"
         }
     ],
     "autoload": {
@@ -15,7 +18,8 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "guzzlehttp/guzzle": "^6.3|^7.0"
+        "guzzlehttp/guzzle": "^6.3|^7.0",
+        "illuminate/collections": "^8.0"
     },
     "suggest":{
     "tightenco/collect": "Must be included if using outside laravel"
